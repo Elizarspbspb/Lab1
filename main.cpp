@@ -65,6 +65,8 @@ int main()
 			}
 			else if (a == 3)
 			{
+				try
+				{
 					cout << " Введите номер редактируемой записи: " << endl;
 					cin >> red;  //редактируемый елемент
 					if (red >= 1 && red <= 4)
@@ -79,6 +81,12 @@ int main()
 					}
 					else
 						printf(" Ошибка....Данного номера не существует\n");
+				}
+				catch (const exception& exc)
+				{
+					printf(" Одинаковые номера рейсов \n");
+					cout << exc.what();
+				}
 			}
 			else
 				return 0;

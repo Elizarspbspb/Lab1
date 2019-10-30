@@ -108,8 +108,12 @@ istream& operator >>(istream& in, Aeroflot& p)   //Ввод рейсов
 	in >> p.plane;
 
 	cout << "Введите номер рейса\n";
-	in >> p.number;
-
+	while (!(in >> p.number) || (cin.peek() != '\n')) // cin.peek() извлекает символ для просмотра 
+	{
+		cin.clear(); // cin.clear() восстанавливает поток, если что-то пошло не так. 
+		while (cin.get() != '\n'); // cin.get() получает символ из потока данных и возвращает Int в виде кода символа.
+		cout << "Ошибка, должны быть только цифры!" << endl; 
+	}
 	return in;
 }
 

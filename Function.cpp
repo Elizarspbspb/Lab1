@@ -75,7 +75,7 @@ int ARRAY::redact(int red, int red2)
 		throw exception("name reading exception");   //переходим в класс Exception, для обработки ошибки
 	}
 	cin >> aero[red];
-	printf("\n Запись рейса произошла успешно \n");
+	printf("\n Запись рейса произошла успешно. \n");
 	return 0;
 }
 

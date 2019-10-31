@@ -70,6 +70,10 @@ int ARRAY::proverka1(int k)
 int ARRAY::redact(int red, int red2)
 {
 	int i = 0, flag = 0;
+	if (proverka1(red2) == 1)
+	{
+		throw exception("name reading exception");   //переходим в класс Exception, для обработки ошибки
+	}
 	cin >> aero[red];
 	printf("\n Запись рейса произошла успешно. \n");
 	return 0;

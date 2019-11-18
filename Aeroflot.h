@@ -10,7 +10,7 @@ public:
 	Aeroflot();         //конструктор
 	//Aeroflot(const string & name, int number, const string & plane);
 
-	Aeroflot(int size1);         //конструктор
+	Aeroflot(int size1, string name, string plane);         //конструктор
 	Aeroflot(const Aeroflot& value);       //конструктор копирвоания
 	~Aeroflot();        //деструктор
 

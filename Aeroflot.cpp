@@ -1,5 +1,4 @@
 ﻿#include "Aeroflot.h"
-#include <cstdlib>
 #include <string>
 #include <iostream>
 using namespace std;
@@ -12,8 +11,11 @@ Aeroflot::Aeroflot()     //конструктор
 	cout << "\nКонструктор\n";
 }
 
-Aeroflot::Aeroflot(int size1)
+Aeroflot::Aeroflot(int size1, string name, string plane)
 {
+	set_number(size1);
+	set_name(name);
+	set_plane(plane);
 	cout << "\nКонструктор с параметром\n";
 }
 

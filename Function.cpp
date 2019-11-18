@@ -1,6 +1,4 @@
 ﻿#include "Function.h"
-
-#include <cstdlib>
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -15,6 +13,10 @@ ARRAY::ARRAY() {
 
 ARRAY::ARRAY(int d)
 {
+	i = d;
+	cout << "Введите " << d << " записей:" << endl << endl;
+	aero = new Aeroflot[d];
+	cout << "\tСписок создан." << endl;
 	cout << "\tСписок по умолчанию создан." << endl;
 }
 
@@ -75,7 +77,7 @@ int ARRAY::redact(int red, int red2)
 		throw exception("name reading exception");   //переходим в класс Exception, для обработки ошибки
 	}
 	cin >> aero[red];
-	printf("\n Запись рейса произошла успешно. \n");
+	cout << "Запись рейса произошла успешно." << endl;
 	return 0;
 }
 
@@ -90,7 +92,7 @@ void ARRAY::show()
 
 void ARRAY::search()
 {
-	cout << "Введите место направления\n";
+	cout << "Введите место направления" << endl;
 	string name;
 	cin >> name;
 	int i;

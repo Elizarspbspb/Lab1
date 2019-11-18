@@ -1,7 +1,5 @@
 ﻿#include "Aeroflot.h"
 #include "Function.h"
-
-#include <cstdlib>
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -14,23 +12,20 @@ using namespace std;
 int main()
 {
 	int size1 = 0;
-	char ch;
 	int a = 0;
 	int flag1 = 0, flag2 = 0, flag3 = 0;
 	int i = 0;
 	setlocale(LC_ALL, "");
 	int b = 0, red = 0, red2 = 0;
 	int select = 0;
-	//=================================
+
 	stringstream ss;
 	string str;
 	string temp;
 
-	printf("\n  Выбор Задания:\n");
-	printf("1 - Задание 1 \n");
-
-	printf("\n Любой символ - выход из программы\n");
-	scanf_s("%d", &select);
+	cout << "Задание 1" << endl;
+	cout << "Любой символ - выход из программы" << endl;
+	cin >> select;
 	if (select == 1)
 	{
 		cout << "Создание 7 объектов" << endl;
@@ -68,7 +63,7 @@ int main()
 				try
 				{
 					cout << " Введите номер редактируемой записи: " << endl;
-					cin >> red;  //редактируемый елемент
+					cin >> red;  //редактируемый элемент
 					if (red >= 1 && red <= 7)
 					{
 						cout << " Введите номер рейса: " << endl;
@@ -76,15 +71,15 @@ int main()
 						if (a1->redact(red - 1, red2) == 0)
 						{
 							a1->sort();
-							printf("УСПех\n");
+							cout << " Успех " << endl;
 						}
 					}
 					else
-						printf(" Ошибка....Данного номера не существует\n");
+						cout << " Ошибка....Данного номера не существует " << endl;
 				}
 				catch (const exception& exc)
 				{
-					printf(" Одинаковые номера рейсов \n");
+					cout << " Одинаковые номера рейсов " << endl;
 					cout << exc.what();
 				}
 			}

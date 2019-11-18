@@ -6,8 +6,9 @@
 class ARRAY {
 private:
 	Aeroflot* aero;
-	int i, j, k;
+	int j, k;
 public:
+	int i;
 	ARRAY();
 	ARRAY(int d);
 	~ARRAY();

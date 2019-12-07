@@ -17,7 +17,7 @@ ARRAY::ARRAY(int d)
 	cout << "Введите " << d << " записей:" << endl << endl;
 	aero = new Aeroflot[d];
 	cout << "\tСписок создан." << endl;
-	cout << "\tСписок по умолчанию создан." << endl;
+	//cout << "\tСписок по умолчанию создан." << endl;
 }
 
 ARRAY::~ARRAY() {

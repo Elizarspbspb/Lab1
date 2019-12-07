@@ -75,11 +75,11 @@ int main()
 						}
 					}
 					else
-						cout << " Ошибка....Данного номера не существует " << endl;
+						cout << " Ошибка...Данного номера не существует " << endl;
 				}
 				catch (const exception& exc)
 				{
-					cout << " Одинаковые номера рейсов " << endl;
+					cout << " Такой номер рейса уже существует " << endl;
 					cout << exc.what();
 				}
 			}
@@ -88,6 +88,8 @@ int main()
 		}
 		delete[] a1;
 	}
+	else
+		cout << "Выход из программы" << endl;
 	system("pause");
 	return 0;
 }
